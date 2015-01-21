@@ -912,3 +912,4 @@ MonoBehaviour:
   EnemyVector: {x: 0, y: 0, z: 0}
   PlayerVector: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0}
+  Variance: 0

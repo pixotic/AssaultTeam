@@ -10,6 +10,7 @@ public class HeroAI : MonoBehaviour {
     public Vector3 EnemyVector;
     public Vector3 PlayerVector;
     public Vector2 velocity;
+    public int Variance;
 
     // Use this for initialization
     void Start() {
@@ -29,10 +30,10 @@ public class HeroAI : MonoBehaviour {
         } else if (Range <= 7f) {
             //transform.Translate(Vector2.MoveTowards(new Vector2(EnemyVector.x, EnemyVector.y), new Vector2(PlayerVector.x, PlayerVector.y), Range) * Speed * Time.deltaTime);
              velocity = new Vector2(
-                ((transform.position.x - EnemyVector.x) * Speed)*-1,
-                ((transform.position.y - EnemyVector.y) * Speed)*-1
+                (transform.position.x - EnemyVector.x) * Speed,
+                (transform.position.y - EnemyVector.y) * Speed
                 );
         }
-        rigidbody2D.velocity = -velocity;
+        rigidbody2D.velocity = velocity;
     }
 }
