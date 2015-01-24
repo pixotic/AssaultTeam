@@ -127,11 +127,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478608, guid: 6489fc36b684590418869f8d295d7bdc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.3499999
+      value: 5.38999987
       objectReference: {fileID: 0}
     - target: {fileID: 478608, guid: 6489fc36b684590418869f8d295d7bdc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.93000007
+      value: -2.07999992
       objectReference: {fileID: 0}
     - target: {fileID: 478608, guid: 6489fc36b684590418869f8d295d7bdc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -228,7 +228,7 @@ Transform:
   m_PrefabInternal: {fileID: 2058569339}
   m_GameObject: {fileID: 467838889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.25, y: 4.30000019, z: 0}
+  m_LocalPosition: {x: 9.34000015, y: 2.42000008, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -504,6 +504,7 @@ GameObject:
   - 4: {fileID: 1647257588}
   - 212: {fileID: 1647257587}
   - 114: {fileID: 1647257586}
+  - 50: {fileID: 1647257589}
   m_Layer: 0
   m_Name: Boss Test
   m_TagString: Enemy
@@ -523,10 +524,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bccf1c98a37a5246855b8c75f0ecc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1903772985}
-  moveSpeed: 3
-  rotationSpeed: 3
-  myTransform: {fileID: 0}
+  Target: {fileID: 0}
+  Enemy: {fileID: 0}
+  Player: {fileID: 0}
+  Range: 0
+  Speed: 0
+  EnemyVector: {x: 0, y: 0, z: 0}
+  PlayerVector: {x: 0, y: 0, z: 0}
 --- !u!212 &1647257587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -562,6 +566,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!50 &1647257589
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647257585}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1903772980
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +645,7 @@ Transform:
   m_PrefabInternal: {fileID: 198931060}
   m_GameObject: {fileID: 1903772980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3499999, y: 3.93000007, z: 0}
+  m_LocalPosition: {x: 5.38999987, y: -2.07999992, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
