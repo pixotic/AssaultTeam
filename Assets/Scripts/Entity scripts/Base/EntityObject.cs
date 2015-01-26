@@ -9,6 +9,7 @@ public class EntityObject : MonoBehaviour {
     public int currentHealth;
     public int maxResource;
     public int currentResource;
+    public bool standingInHazard;
     
     public enum EntityClasses { None, Tank, dpsMelee, dpsRanged, Healer };
     //^The enum must be public
@@ -49,6 +50,20 @@ public class EntityObject : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D coll) {
+        Debug.Log("bump");
+        if (coll.gameObject.tag == "Hazard") {
+            //coll.gameObject.SendMessage("ApplyDamage", 10);
+            standingInHazard = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D coll) {
+        if (coll.gameObject.tag == "Hazard")
+            standingInHazard = false;
 
     }
 }
